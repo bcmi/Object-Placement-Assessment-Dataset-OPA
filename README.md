@@ -1,4 +1,4 @@
-# Object-Shadow-Generation-Dataset-DESOBA
+# Object-Placement-Assessment-Dataset-OPA
 
 **Object-Placement-Assessment** (OPA) is to verify whether a composite image is plausible in terms of the object placement. The foreground object should be placed at a reasonable location on the background considering location, size, occlusion, semantics, and etc.
 
