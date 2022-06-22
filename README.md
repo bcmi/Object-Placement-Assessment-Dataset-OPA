@@ -72,14 +72,14 @@ Our OPA dataset contains 62,074 training images and 11,396 test images, in which
 
   After running the script, input the foreground ID, background ID, position, label, and storage path to generate your composite image.
 
-### OPA train/set
-- Download pretrained models from [Baidu Cloud](https://pan.baidu.com/s/1Ym4WQyLsKlllFyQr4vh8Rw)(access code: bdv8) and put it in "best-acc.pth"
-- Download pretrained resnet18 from https://download.pytorch.org/models/resnet18-5c106cde.pth or [Baidu Cloud](https://pan.baidu.com/s/1DcJXaAQtoV4EbxQbuHfvxg )(access code: 4f5v ) put it in "pretrained_models/resnet18.pth"
+## Our SimOPA 
+- Download pretrained model from [Baidu Cloud](https://pan.baidu.com/s/1Ym4WQyLsKlllFyQr4vh8Rw)(access code: bdv8) and put it in "best-acc.pth"
+- Download pretrained resnet18 from https://download.pytorch.org/models/resnet18-5c106cde.pth or [Baidu Cloud](https://pan.baidu.com/s/1DcJXaAQtoV4EbxQbuHfvxg )(access code: 4f5v ) and put it in "pretrained_models/resnet18.pth"
 - To train a model, run:
 ```
 python train.py
 ```
-- To test the best model, run:
+- To test the pretrained model, run:
 ```
 python test_model.py
 ```
@@ -90,7 +90,7 @@ If you find this work useful for your research, please cite our paper using the 
 ```
 @article{liu2021OPA,
   title={OPA: Object Placement Assessment Dataset},
-  author={Liu,Liu and Zhang,Bo and Li,Jiangtong and Niu,Li and Liu,Qingyang and Zhang,Liqing},
+  author={Liu,Liu and Liu,Zhenchen and Zhang,Bo and Li,Jiangtong and Niu,Li and Liu,Qingyang and Zhang,Liqing},
   journal={arXiv preprint arXiv:2107.01889},
   year={2021}
 }
