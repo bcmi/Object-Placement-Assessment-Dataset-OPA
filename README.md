@@ -2,6 +2,9 @@
 
 **Object-Placement-Assessment** (OPA) is to verify whether a composite image is plausible in terms of the object placement. The foreground object should be placed at a reasonable location on the background considering location, size, occlusion, semantics, and etc.
 
+
+## Dataset
+
 Our dataset **OPA** is a synthesized dataset for Object Placement Assessment based on [COCO](http://cocodataset.org) dataset.  We select unoccluded objects from multiple categories as our candidate foreground objects. The foreground objects are pasted on their compatible background images with random sizes and locations to form composite images, which are sent to human annotators for rationality labeling. Finally, we split the collected dataset into training set and test set, in which the background images and foreground objects have no overlap between training set and test set. We show some example positive and negative images in our dataset in the figure below.
 
 <img src='Examples/dataset_sample.png' align="center" width=1024>
@@ -10,7 +13,9 @@ Illustration of OPA dataset samples: Some positive and negative samples in our O
 
 Our OPA dataset contains 62,074 training images and 11,396 test images, in which the foregrounds/backgrounds in training set and test set have no overlap. The training (resp., test) set contains 21,376 (resp.,3,588) positive samples and 40,698 (resp., 7,808) negative samples. Besides, the training (resp., test) set contains 2,701 (resp., 1,436) unrepeated foreground objects and1,236 (resp., 153) unrepeated background images. The OPA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1IzVLcXWLFgFR4GAbxZUPkw) (access code: a982) or [**Google Drive**](https://drive.google.com/file/d/133Wic_nSqfrIajDnnxwvGzjVti-7Y6PF/view?usp=sharing).
 
+## Dataset Extension
 
+Based on the foregrounds and backgrounds from OPA dataset, we additionally synthesize XXX composite images and annotate their binary rationality labels. We refer to the extended set as OPA-ext, which includes XXX positive composite images and XXX negative composite images. Note that the labels in OPA-ext are relatively more noisy than OPA dataset. With the same data format as OPA, the OPA-ext dataset is provided in XXX. 
 
 
 ## Prerequisites
