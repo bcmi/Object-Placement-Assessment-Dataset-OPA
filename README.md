@@ -77,8 +77,8 @@ Based on the foregrounds and backgrounds from OPA dataset, we additionally synth
   After running the script, input the foreground ID, background ID, position, label, and storage path to generate your composite image.
 
 ## Our SimOPA 
-- Download pretrained model from [Baidu Cloud](https://pan.baidu.com/s/1Ym4WQyLsKlllFyQr4vh8Rw)(access code: bdv8) and put it in "best-acc.pth"
-- Download pretrained resnet18 from https://download.pytorch.org/models/resnet18-5c106cde.pth or [Baidu Cloud](https://pan.baidu.com/s/1DcJXaAQtoV4EbxQbuHfvxg )(access code: 4f5v ) and put it in "pretrained_models/resnet18.pth"
+- Download pretrained model from [Baidu Cloud](https://pan.baidu.com/s/1xozUrbiBjGrchdcF1007sA)(access code: up1c) and put it in "best-acc.pth"
+- Download pretrained resnet18 from https://download.pytorch.org/models/resnet18-5c106cde.pth or [Baidu Cloud](https://pan.baidu.com/s/1RCrfRiKCpY_SY7Ddeo_B1A)(access code: msqg) and put it in "pretrained_models/resnet18.pth"
 - To train a model, run:
 ```
 python train.py
