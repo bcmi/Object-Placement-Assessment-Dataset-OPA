@@ -87,6 +87,13 @@ python train.py
 ```
 python test_model.py
 ```
+
+# Other Resources
+
++ [Awesome-Object-Placement](https://github.com/bcmi/Awesome-Object-Placement)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
+
+
 ## Bibtex
 
 If you find this work useful for your research, please cite our paper using the following BibTeX  [[arxiv](https://arxiv.org/pdf/2107.01889.pdf)]:
