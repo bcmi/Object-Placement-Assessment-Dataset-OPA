@@ -15,7 +15,7 @@ Our OPA dataset contains 62,074 training images and 11,396 test images, in which
 
 ## Dataset Extension
 
-Based on the foregrounds and backgrounds from OPA dataset, we additionally synthesize 80263 composite images and annotate their binary rationality labels. We refer to the extended set as OPA-ext, which includes 28455 positive composite images and 51808 negative composite images. Note that the labels in OPA-ext are relatively more noisy than OPA dataset. With the same data format as OPA, the OPA-ext dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1GTGwISKJIIp1HZ5AYJSH4w?pwd=fogy) (access code: fogy). 
+Based on the foregrounds and backgrounds from OPA dataset, we additionally synthesize 80263 composite images and annotate their binary rationality labels. We refer to the extended set as OPA-ext, which includes 28455 positive composite images and 51808 negative composite images. The labels in OPA-ext are relatively more noisy than OPA dataset. Note that the foregrounds/backgrounds in OPA-ext have overlap with those in OPA test set, so using OPA-ext to augment OPA training set could lead to unreasonably high performance on OPA test set due to foregrounds/backgrounds leakage. With the same data format as OPA, the OPA-ext dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1GTGwISKJIIp1HZ5AYJSH4w?pwd=fogy) (access code: fogy). 
 
 ## Prerequisites
 
