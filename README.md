@@ -88,6 +88,13 @@ python train.py
 python test_model.py
 ```
 
+## OPA Score
+
+To get general assessment model to evaluate the rationality of object placement, we train SimOPA and [extended SimOPA](https://github.com/bcmi/GracoNet-Object-Placement) on the combination of the whole OPA dataset and the whole OPA-ext dataset, and release the trained models as two assessment models. 
+
++ SimOPA
++ SimOPA-ext
+
 ## Extension to FOPA
 
 With a composite image and its composite mask as input, SimOPA can only predict a rationality score for one scale and location in one forward pass, which is very inefficient. We have extended SimOPA to Fast Object Placement Assessment ([FOPA](https://github.com/bcmi/FOPA-Fast-Object-Placement-Assessment)), which can predict the rationality scores for all locations with a pair of background and scaled foreground as input in a single forward pass. 
