@@ -92,28 +92,27 @@ python test_model.py
 
 To get general assessment model to evaluate the rationality of object placement, we train SimOPA and [extended SimOPA](https://github.com/bcmi/GracoNet-Object-Placement) on the combination of the whole OPA dataset and the whole OPA-ext dataset, and release the trained models as two assessment models. 
 
-+ Download pretrained models from [Baidu Cloud](https://pan.baidu.com/s/1011OoeZ8oQuEX43SN-loKQ)(access code: bcmi) or [GoogleDrive](https://drive.google.com/file/d/1jepX6-8FhIfFEOGob-9rSj25BaZwuXIP/view?usp=sharing) and unzip them to ``eval_opascore/checkpoints``.
+- Download pretrained models from [Baidu Cloud](https://pan.baidu.com/s/1011OoeZ8oQuEX43SN-loKQ)(access code: bcmi) or [GoogleDrive](https://drive.google.com/file/d/1jepX6-8FhIfFEOGob-9rSj25BaZwuXIP/view?usp=sharing) and unzip them to ``eval_opascore/checkpoints``.
 
-+ Estimate OPA score with SimOPA:
+- Estimate OPA score with SimOPA:
 ```
 python eval_opascore/simopa.py --image <composite-image-path> --mask <foreground-mask-path> --gpu <gpu-id>
 ```
-
-+ Estimate OPA score with SimOPA-ext:
-1. install packages in ``requirements.txt``.
-2. download the faster-rcnn model pretrained on visual genome from [google drive](https://drive.google.com/file/d/18n_3V1rywgeADZ3oONO0DsuuS9eMW6sN/view) (provided by [Faster-RCNN-VG](https://github.com/shilrley6/Faster-R-CNN-with-model-pretrained-on-Visual-Genome)) to ```faster-rcnn/models/faster_rcnn_res101_vg.pth```.
-3. build faster-rcnn:
-```
-cd faster-rcnn/lib
-python setup.py build develop
-cd ../..
-```
-4. run evaluation code:
-```
-python eval_opascore/simopa_ext.py --image <composite-image-path> --mask <foreground-mask-path> --gpu <gpu-id>
-```
-
 We aslo provide several examples of paired composite image and mask in ``eval_opascore/examples``.
+
+- Estimate OPA score with SimOPA-ext:
+  1. install packages in ``requirements.txt``.
+  2. download the faster-rcnn model pretrained on visual genome from [google drive](https://drive.google.com/file/d/18n_3V1rywgeADZ3oONO0DsuuS9eMW6sN/view) (provided by [Faster-RCNN-VG](https://github.com/shilrley6/Faster-R-CNN-with-model-pretrained-on-Visual-Genome)) to ```faster-rcnn/models/faster_rcnn_res101_vg.pth```.
+  3. build faster-rcnn：
+     ```
+     cd faster-rcnn/lib
+     python setup.py build develop
+     cd ../..
+     ```
+  4. run evaluation code:
+     ```
+     python eval_opascore/simopa_ext.py --image <composite-image-path> --mask <foreground-mask-path> --gpu <gpu-id>
+     ```
 
 ## Extension to FOPA
 
