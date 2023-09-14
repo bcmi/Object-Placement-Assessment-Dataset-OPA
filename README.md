@@ -100,7 +100,7 @@ python eval_opascore/simopa.py --image <composite-image-path> --mask <foreground
 ```
 We aslo provide several examples of paired composite image and mask in ``eval_opascore/examples``.
 
-- Estimate OPA score with SimOPA-ext:
+- Estimate OPA score with extended SimOPA:
   1. install packages in ``requirements.txt``.
   2. download the faster-rcnn model pretrained on visual genome from [google drive](https://drive.google.com/file/d/18n_3V1rywgeADZ3oONO0DsuuS9eMW6sN/view) (provided by [Faster-RCNN-VG](https://github.com/shilrley6/Faster-R-CNN-with-model-pretrained-on-Visual-Genome)) to ```faster-rcnn/models/faster_rcnn_res101_vg.pth```.
   3. build faster-rcnn：
