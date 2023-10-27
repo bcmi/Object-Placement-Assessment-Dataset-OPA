@@ -119,7 +119,7 @@ We aslo provide several examples of paired composite image and mask in ``eval_op
 With a composite image and its composite mask as input, SimOPA can only predict a rationality score for one scale and location in one forward pass, which is very inefficient. We have extended SimOPA to Fast Object Placement Assessment ([FOPA](https://github.com/bcmi/FOPA-Fast-Object-Placement-Assessment)), which can predict the rationality scores for all locations with a pair of background and scaled foreground as input in a single forward pass. 
 
 
-# Other Resources
+## Other Resources
 
 + [Awesome-Object-Placement](https://github.com/bcmi/Awesome-Object-Placement)
 + [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
