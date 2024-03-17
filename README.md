@@ -2,6 +2,7 @@
 
 **Object-Placement-Assessment** (OPA) is to verify whether a composite image is plausible in terms of the object placement. The foreground object should be placed at a reasonable location on the background considering location, size, occlusion, semantics, and etc.
 
+**Our SimOPA has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try ＼(^▽^)／** 
 
 ## Dataset
 
