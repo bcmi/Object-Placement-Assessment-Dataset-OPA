@@ -123,7 +123,7 @@ With a composite image and its composite mask as input, SimOPA can only predict 
 ## Other Resources
 
 + [Awesome-Object-Placement](https://github.com/bcmi/Awesome-Object-Placement)
-+ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Object-Insertion)
 
 
 ## Bibtex
