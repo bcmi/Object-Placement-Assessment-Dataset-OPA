@@ -12,11 +12,11 @@ Our dataset **OPA** is a synthesized dataset for Object Placement Assessment bas
 
 Illustration of OPA dataset samples: Some positive and negative samples in our OPA dataset and the inserted foreground objects are marked with red outlines. Top row: positive samples; Bottom rows: negative samples, including objects with inappropriate size (e.g., f, g, h), without supporting force (e.g., i, j, k), appearing in the semantically unreasonable place (e.g., l, m, n), with unreasonable occlusion (e.g., o, p, q), and with inconsistent perspectives (e.g., r, s, t).
 
-Our OPA dataset contains 62,074 training images and 11,396 test images, in which the foregrounds/backgrounds in training set and test set have no overlap. The training (resp., test) set contains 21,376 (resp.,3,588) positive samples and 40,698 (resp., 7,808) negative samples. Besides, the training (resp., test) set contains 2,701 (resp., 1,436) unrepeated foreground objects and1,236 (resp., 153) unrepeated background images. The OPA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1IzVLcXWLFgFR4GAbxZUPkw) (access code: a982) or [**Google Drive**](https://drive.google.com/file/d/133Wic_nSqfrIajDnnxwvGzjVti-7Y6PF/view?usp=sharing).
+Our OPA dataset contains 62,074 training images and 11,396 test images, in which the foregrounds/backgrounds in training set and test set have no overlap. The training (resp., test) set contains 21,376 (resp.,3,588) positive samples and 40,698 (resp., 7,808) negative samples. Besides, the training (resp., test) set contains 2,701 (resp., 1,436) unrepeated foreground objects and1,236 (resp., 153) unrepeated background images. The OPA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1IzVLcXWLFgFR4GAbxZUPkw) (access code: a982) or [**Dropout**](https://www.dropbox.com/scl/fi/8v4ehaa51x4kvgpd8ecuf/OPA.rar?rlkey=3fde3vvmnitcuj0vthurtl1lm&st=e6ccb6ra&dl=0).
 
 ## Dataset Extension
 
-Based on the foregrounds and backgrounds from OPA dataset, we additionally synthesize 80263 composite images and annotate their binary rationality labels. We refer to the extended set as OPA-ext, which includes 28455 positive composite images and 51808 negative composite images. The labels in OPA-ext are relatively more noisy than OPA dataset. Note that the foregrounds/backgrounds in OPA-ext have overlap with those in OPA test set, so using OPA-ext to augment OPA training set could lead to unreasonably high performance on OPA test set due to foregrounds/backgrounds leakage. With the same data format as OPA, the OPA-ext dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1GTGwISKJIIp1HZ5AYJSH4w?pwd=fogy) (access code: fogy). 
+Based on the foregrounds and backgrounds from OPA dataset, we additionally synthesize 80263 composite images and annotate their binary rationality labels. We refer to the extended set as OPA-ext, which includes 28455 positive composite images and 51808 negative composite images. The labels in OPA-ext are relatively more noisy than OPA dataset. Note that the foregrounds/backgrounds in OPA-ext have overlap with those in OPA test set, so using OPA-ext to augment OPA training set could lead to unreasonably high performance on OPA test set due to foregrounds/backgrounds leakage. With the same data format as OPA, the OPA-ext dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1GTGwISKJIIp1HZ5AYJSH4w?pwd=fogy) (access code: fogy) or [**Dropout**](https://www.dropbox.com/scl/fi/i272nykt0w258adu5bufu/OPA_extension.zip?rlkey=vavcw19r9w9pwe5af5c1916tt&st=8wo5e6td&dl=0). 
 
 ## Prerequisites
 
@@ -78,8 +78,8 @@ Based on the foregrounds and backgrounds from OPA dataset, we additionally synth
   After running the script, input the foreground ID, background ID, position, label, and storage path to generate your composite image.
 
 ## Our SimOPA 
-- Download pretrained model from [Baidu Cloud](https://pan.baidu.com/s/1xozUrbiBjGrchdcF1007sA)(access code: up1c) or [GoogleDrive](https://drive.google.com/file/d/11h5L_C-RjgRHDdgk5to7ZfgPFWcUbwxv/view?usp=drive_link) and put it in "best-acc.pth"
-- Download pretrained resnet18 from https://download.pytorch.org/models/resnet18-5c106cde.pth or [Baidu Cloud](https://pan.baidu.com/s/1RCrfRiKCpY_SY7Ddeo_B1A)(access code: msqg) and put it in "pretrained_models/resnet18.pth"
+- Download pretrained model from [Baidu Cloud](https://pan.baidu.com/s/1xozUrbiBjGrchdcF1007sA)(access code: up1c) or [Dropout](https://www.dropbox.com/scl/fi/0z362p6v4mejsljy6ipkb/best-acc.pth?rlkey=jg1trs2be8qfg2updkq8goc2c&st=llc060nq&dl=0) and put it in "best-acc.pth"
+- Download pretrained resnet18 from [Baidu Cloud](https://pan.baidu.com/s/1RCrfRiKCpY_SY7Ddeo_B1A)(access code: msqg) or [Dropout](https://www.dropbox.com/scl/fi/x393eu6b7ivffrdd3aes8/resnet18.pth?rlkey=e4kpsa4pkvrwsmle8o7gy7jfv&st=p0phqgwl&dl=0), and put it in "pretrained_models/resnet18.pth"
 - To train a model, run:
 ```
 python train.py
@@ -93,7 +93,7 @@ python test_model.py
 
 To get general assessment model to evaluate the rationality of object placement, we train SimOPA and [extended SimOPA](https://github.com/bcmi/GracoNet-Object-Placement) on the combination of the whole OPA dataset and the whole OPA-ext dataset, and release the trained models as two assessment models. 
 
-- Download pretrained models from [Baidu Cloud](https://pan.baidu.com/s/1011OoeZ8oQuEX43SN-loKQ)(access code: bcmi) or [GoogleDrive](https://drive.google.com/file/d/1jepX6-8FhIfFEOGob-9rSj25BaZwuXIP/view?usp=sharing) and unzip them to ``eval_opascore/checkpoints``.
+- Download pretrained models from [Baidu Cloud](https://pan.baidu.com/s/1011OoeZ8oQuEX43SN-loKQ)(access code: bcmi) or [Dropout](https://www.dropbox.com/scl/fi/jkutf16ziehk3bnyl2e6u/OPA_checkpoints.zip?rlkey=e9ut8jdkf2okekcmuvdlpyjlm&st=e3dwrugp&dl=0) and unzip them to ``eval_opascore/checkpoints``.
 
 - Estimate OPA score with SimOPA:
 ```
@@ -103,7 +103,7 @@ We aslo provide several examples of paired composite image and mask in ``eval_op
 
 - Estimate OPA score with extended SimOPA:
   1. install packages in ``requirements.txt``.
-  2. download the faster-rcnn model pretrained on visual genome from [google drive](https://drive.google.com/file/d/18n_3V1rywgeADZ3oONO0DsuuS9eMW6sN/view) (provided by [Faster-RCNN-VG](https://github.com/shilrley6/Faster-R-CNN-with-model-pretrained-on-Visual-Genome)) to ```faster-rcnn/models/faster_rcnn_res101_vg.pth```.
+  2. download the faster-rcnn model pretrained on visual genome from [google drive](https://drive.google.com/file/d/18n_3V1rywgeADZ3oONO0DsuuS9eMW6sN/view) (provided by [Faster-RCNN-VG](https://github.com/shilrley6/Faster-R-CNN-with-model-pretrained-on-Visual-Genome)) or [Dropout](https://www.dropbox.com/scl/fi/05rlcq1cafpfaz4enm9df/faster_rcnn_res101_vg.pth?rlkey=wawnofvzrb11iir4epl5rg9m8&st=2nx5nxfl&dl=0)  to ```faster-rcnn/models/faster_rcnn_res101_vg.pth```.
   3. build faster-rcnn：
      ```
      cd faster-rcnn/lib
